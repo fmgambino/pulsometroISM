@@ -1,0 +1,155 @@
+/* Tema responsive del Instituto San Miguel;
+     sin fuentes ni recursos de internet. */
+
+:root {
+    font-family:system-ui;
+    color:#eaf2ff;
+    background:#091322
+}
+* {
+    box-sizing:border-box
+}
+body {
+    margin:0
+}
+header,main,footer {
+    max-width:980px;
+    margin:auto;
+    padding:22px
+}
+header {
+    display:flex;
+    align-items:center;
+    gap:16px
+}
+header img {
+    width:64px
+}
+h1 {
+    margin:0;
+    font-size:clamp(24px,5vw,40px)
+}
+p {
+    color:#b1c1d7
+}
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px
+}
+.card {
+    background:#12233a;
+    border:1px solid #29415f;
+    border-radius:22px;
+    padding:24px;
+    margin-bottom:18px
+}
+.clock {
+    font-size:clamp(42px,10vw,86px);
+    font-variant-numeric:tabular-nums;
+    font-weight:800
+}
+.stars {
+    color:#ffce63;
+    font-size:32px
+}
+input,button {
+    font:inherit;
+    border-radius:12px;
+    padding:13px;
+    border:1px solid #426085;
+    margin:5px 0;
+    max-width:100%
+}
+input {
+    background:#091322;
+    color:white;
+    width:100%
+}
+button {
+    background:#64e3b7;
+    color:#072c24;
+    font-weight:bold;
+    cursor:pointer
+}
+button.secondary {
+    background:#213650;
+    color:white
+}
+button:disabled {
+    opacity:.4;
+    cursor:default
+}
+.badge {
+    color:#64e3b7
+}
+table {
+    width:100%;
+    border-collapse:collapse
+}
+td,th {
+    padding:10px 5px;
+    text-align:left;
+    border-bottom:1px solid #29415f
+}
+small {
+    color:#b1c1d7
+}
+#notice {
+    min-height:28px;
+    color:#ffd17a
+}
+.scroll {
+    overflow:auto
+}
+summary {
+    cursor:pointer
+}
+footer {
+    font-size:13px;
+    color:#a8bbd3
+}
+@media(max-width:650px) {
+    .grid {
+    grid-template-columns:1fr
+}
+.card {
+    padding:18px
+}
+header,main,footer {
+    padding:15px
+}
+
+}
+
+
+header img {
+    width:150px;
+    height:auto;
+    background:white;
+    border-radius:10px;
+    padding:7px
+}
+
+@media(max-width:650px) {
+    header img {
+    width:100px
+}
+
+}
+
+
+/* Variables para ambos temas; el contraste se aplica también a formularios. */
+:root{color-scheme:dark;--bg:#091322;--fg:#eaf2ff;--card:#12233a;--muted:#b1c1d7;--border:#426085;--secondary:#213650;--accent:#64e3b7;--star:#ffce63}
+:root[data-theme=light]{color-scheme:light;--bg:#edf3fa;--fg:#12233a;--card:#fff;--muted:#405773;--border:#8b9fb7;--secondary:#dbe7f5;--accent:#08765c;--star:#9c6300}
+:root,body{background:var(--bg);color:var(--fg)}
+.card{background:var(--card);border-color:var(--border)}
+p,small,footer{color:var(--muted)}
+input{background:var(--bg);color:var(--fg);border-color:var(--border)}
+button.secondary{background:var(--secondary);color:var(--fg)}
+button{background:var(--accent);color:var(--bg);border-color:var(--border)}
+a,.badge{color:var(--accent)}
+.stars,#notice{color:var(--star)}
+td,th{border-color:var(--border)}
+.theme-toggle{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:48px}
+@media(max-width:420px){header{flex-wrap:wrap}header img{width:105px}header h1{font-size:25px}}

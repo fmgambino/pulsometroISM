@@ -1,0 +1,10 @@
+/* Personalización institucional: no modifica archivos de la dependencia. */
+:root{color-scheme:dark;--bg:#091322;--fg:#eaf2ff;--card:#12233a;--line:#426085;--accent:#64e3b7}
+:root[data-theme=light]{color-scheme:light;--bg:#edf3fa;--fg:#12233a;--card:#fff;--line:#617b9b;--accent:#08765c}
+body{background:var(--bg)!important;color:var(--fg)!important;font-family:system-ui!important;margin:0;padding:20px!important}
+body>div{background:var(--card);border-radius:20px;padding:20px!important;max-width:520px!important;margin:16px auto!important;box-sizing:border-box}
+a{color:var(--accent)!important}button,input,select{font:inherit;border-radius:10px!important}
+button{background:var(--accent)!important;color:var(--bg)!important}input,select{background:var(--bg)!important;color:var(--fg)!important;border:1px solid var(--line)!important}
+.ism-header,.ism-footer{text-align:center;max-width:520px;margin:20px auto;line-height:1.6}
+.ism-header img{width:220px;max-width:90%;height:auto;background:#fff;border-radius:12px;padding:10px}
+.ism-header h1{font-size:28px}.ism-footer{font-size:13px}.theme-toggle{width:50px;height:48px;padding:9px!important;display:inline-flex!important;align-items:center;justify-content:center}
