@@ -1,0 +1,23 @@
+PULSOMETRO 3.2.0 - ESP32 clasico DevKit 38 pines
+
+1. Abrir la carpeta del proyecto en VS Code/PlatformIO y ejecutar Upload.
+   Alternativa sin compilar: GRABAR_WINDOWS.bat COM5 (cambiar COM5).
+   Binario completo: release/PULSOMETRO_ESP32_38P.bin, offset 0x0000.
+2. Conectarse a PULSOMETRO-ISM, clave SanMiguel2026.
+3. Portal WiFiManager: http://192.168.4.1/wifi
+   IMPORTANTE: NO agregar :8080 ni usar HTTPS.
+4. Juego: http://192.168.4.1/game
+5. Diagnostico: http://192.168.4.1/api/health (debe indicar 3.2.0).
+6. OLED SSD1306 128x64: direccion 0x3C, SDA GPIO21, SCL GPIO22.
+
+No ejecutar Upload Filesystem: HTML/CSS/JS/logo se incluyen al compilar.
+Los archivos fuentes estan en web/; Live Server solo muestra el diseno,
+no ejecuta la API ni inicia partidas de la ESP32.
+
+Ver README.md y docs/VALIDACION.md. Compilado; verificacion fisica pendiente.
+
+NUEVO: borrado individual o por seleccion en el ranking (usuario admin).
+El ranking TOP 30 queda guardado al apagar. No usar Erase Flash si desea conservarlo.
+Asistente web: pulsar Activar voz y sonidos; el audio sale del celular/PC.
+WiFi: esperar hasta 25 segundos al guardar. Si falla, leer el motivo numerico
+que aparece en el portal o en el monitor serie y verificar la red del router.
